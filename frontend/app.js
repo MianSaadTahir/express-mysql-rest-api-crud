@@ -7,7 +7,6 @@ function loadProducts(search = "") {
     success: function (res) {
       let products = res.data;
 
-      // Filter products if search term is provided
       if (search) {
         const term = search.toLowerCase();
         products = products.filter(
@@ -29,25 +28,40 @@ function displayProducts(products) {
     return;
   }
 
-  let html =
-    "<table border='1'><tr><th>Name</th><th>Price</th><th>Category</th><th>Stock</th><th>Actions</th></tr>";
+  let html = `<table class="table table-striped table-hover">
+      <thead class="table-dark">
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Category</th>
+          <th>Stock</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>`;
 
   products.forEach((p) => {
     html += `
       <tr>
         <td>${p.name}</td>
+        <td>${p.description || ""}</td>
         <td>${p.price}</td>
         <td>${p.category || ""}</td>
         <td>${p.stock_quantity || 0}</td>
         <td>
-          <button onclick="editProduct(${p.id})">Edit</button>
-          <button onclick="deleteProduct(${p.id})">Delete</button>
+          <button class="btn btn-sm btn-primary me-1" onclick="editProduct(${
+            p.id
+          })">Edit</button>
+          <button class="btn btn-sm btn-danger" onclick="deleteProduct(${
+            p.id
+          })">Delete</button>
         </td>
       </tr>
     `;
   });
 
-  html += "</table>";
+  html += "</tbody></table>";
   $("#productList").html(html);
 }
 
@@ -130,6 +144,7 @@ function editProduct(id) {
       $("#price").val(p.price);
       $("#category").val(p.category);
       $("#stock_quantity").val(p.stock_quantity);
+      $("html, body").animate({ scrollTop: 0 }, "fast"); // Scroll to form
     },
     error: () => alert("Failed to load product"),
   });

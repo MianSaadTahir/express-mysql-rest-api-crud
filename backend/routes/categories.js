@@ -1,7 +1,15 @@
 const express = require("express");
 const router = express.Router();
 const db = require("../db");
-const { success, error } = require("./responseWrap");
+
+// Helper functions
+function success(data, message) {
+  return { status: "success", message, data };
+}
+
+function error(message, data = null) {
+  return { status: "error", message, data };
+}
 
 // GET categories
 router.get("/", (req, res) => {

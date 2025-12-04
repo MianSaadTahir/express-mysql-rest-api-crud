@@ -23,7 +23,7 @@ A full-stack web application for managing products and categories. The backend i
 
 ## Screenshots
 
-<img src="frontend/assets/1.png" alt="frontend" width="75%">
+<img src="/assets/1.png" alt="frontend" width="75%">
 
 ## Technologies Used
 

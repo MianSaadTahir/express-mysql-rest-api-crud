@@ -8,6 +8,7 @@ A full-stack web application for managing products and categories. The backend i
 - [Screenshots](#screenshots)
 - [Technologies Used](#technologies-used)
 - [Usage](#usage)
+- [API Documentation](#API-Documentation)
 - [Contributing](#contributing)
 
 ## Features
@@ -52,6 +53,189 @@ A full-stack web application for managing products and categories. The backend i
    `node app.js`
 6. Open the frontend:
    Open `frontend/index.html` in a web browser (ensure backend server is running).
+
+## API Documentation
+
+### Products API
+
+**GET /api/products**
+
+- Description: Retrieve all products.
+- Request: None
+- Response:
+
+```json
+{
+  "status": "success",
+  "data": [
+    {
+      "id": 1,
+      "name": "Laptop",
+      "description": "High-performance laptop",
+      "price": 999.99,
+      "category": "Electronics",
+      "stock_quantity": 15
+    },
+    {
+      "id": 2,
+      "name": "Smartphone",
+      "description": "Latest smartphone model",
+      "price": 699.99,
+      "category": "Electronics",
+      "stock_quantity": 25
+    }
+  ],
+  "message": "Products retrieved"
+}
+```
+
+**GET /api/products/{id}**
+
+- Description: Retrieve a single product by ID.
+- Request: None
+- Response:
+
+```{
+  "status": "success",
+  "data": {
+    "id": 1,
+    "name": "Laptop",
+    "description": "High-performance laptop",
+    "price": 999.99,
+    "category": "Electronics",
+    "stock_quantity": 15
+  },
+  "message": "Product retrieved"
+}
+```
+
+**POST /api/products**
+
+- Description: Create a new product.
+- Request Body:
+
+```{
+  "name": "New Product",
+  "description": "Product description",
+  "price": 49.99,
+  "category": "Books",
+  "stock_quantity": 10
+}
+```
+
+- Response:
+
+```{
+  "status": "success",
+  "data": {
+    "id": 3,
+    "name": "New Product",
+    "description": "Product description",
+    "price": 49.99,
+    "category": "Books",
+    "stock_quantity": 10
+  },
+  "message": "Product created"
+}
+```
+
+**PUT /api/products/{id}**
+
+- Description: Update an existing product by ID.
+- Request Body: (any fields to update)
+
+```{
+  "name": "Updated Product",
+  "price": 59.99
+}
+```
+
+- Response:
+
+```{
+  "status": "success",
+  "data": {
+    "id": 3,
+    "name": "Updated Product",
+    "description": "Product description",
+    "price": 59.99,
+    "category": "Books",
+    "stock_quantity": 10
+  },
+  "message": "Product updated"
+}
+```
+
+**DELETE /api/products/{id}**
+
+- Description: Delete a product by ID.
+- Request: None
+- Response:
+
+```{
+  "status": "success",
+  "data": {
+    "id": 3
+  },
+  "message": "Product deleted"
+}
+```
+
+### Categories API
+
+**GET /api/categories**
+
+- Description: Retrieve all categories.
+- Request: None
+- Response:
+
+```{
+  "status": "success",
+  "data": [
+    {
+      "id": 1,
+      "name": "Electronics",
+      "description": "Electronic devices and accessories"
+    },
+    {
+      "id": 2,
+      "name": "Books",
+      "description": "Various books and publications"
+    }
+  ],
+  "message": "Categories retrieved"
+}
+```
+
+**GET /api/categories/{id}/products**
+
+- Description: Retrieve all products under a specific category by category ID.
+- Request: None
+- Response:
+
+```{
+  "status": "success",
+  "data": [
+    {
+      "id": 1,
+      "name": "Laptop",
+      "description": "High-performance laptop",
+      "price": 999.99,
+      "category": "Electronics",
+      "stock_quantity": 15
+    },
+    {
+      "id": 2,
+      "name": "Smartphone",
+      "description": "Latest smartphone model",
+      "price": 699.99,
+      "category": "Electronics",
+      "stock_quantity": 25
+    }
+  ],
+  "message": "Products by category"
+}
+```
 
 ## Contributing
 

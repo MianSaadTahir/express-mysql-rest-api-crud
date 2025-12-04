@@ -5,12 +5,37 @@
     <link rel="stylesheet" href="style.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
-
   <body>
     <h1>Product Management System</h1>
 
-    <button id="loadBtn">Load Products</button>
+    <!-- Search Bar -->
+    <input
+      type="text"
+      id="search"
+      placeholder="Search by name or category..."
+    />
 
+    <!-- Add Product Form -->
+    <h2>Add / Edit Product</h2>
+    <form id="productForm">
+      <input type="hidden" id="productId" />
+      <input type="text" id="name" placeholder="Name" required />
+      <input type="text" id="description" placeholder="Description" />
+      <input
+        type="number"
+        step="0.01"
+        id="price"
+        placeholder="Price"
+        required
+      />
+      <input type="text" id="category" placeholder="Category" />
+      <input type="number" id="stock_quantity" placeholder="Stock Quantity" />
+      <button type="submit">Save Product</button>
+      <button type="button" id="resetBtn">Reset</button>
+    </form>
+
+    <!-- Product Table -->
+    <h2>Product List</h2>
     <div id="productList"></div>
 
     <script src="app.js"></script>

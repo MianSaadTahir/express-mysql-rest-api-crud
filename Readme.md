@@ -95,7 +95,7 @@ A full-stack web application for managing products and categories. The backend i
 - Request: None
 - Response:
 
-```
+```json
 {
   "status": "success",
   "data": {

@@ -95,7 +95,8 @@ A full-stack web application for managing products and categories. The backend i
 - Request: None
 - Response:
 
-```{
+```json
+{
   "status": "success",
   "data": {
     "id": 1,
@@ -114,7 +115,8 @@ A full-stack web application for managing products and categories. The backend i
 - Description: Create a new product.
 - Request Body:
 
-```{
+```json
+{
   "name": "New Product",
   "description": "Product description",
   "price": 49.99,
@@ -125,7 +127,8 @@ A full-stack web application for managing products and categories. The backend i
 
 - Response:
 
-```{
+```json
+{
   "status": "success",
   "data": {
     "id": 3,
@@ -144,7 +147,8 @@ A full-stack web application for managing products and categories. The backend i
 - Description: Update an existing product by ID.
 - Request Body: (any fields to update)
 
-```{
+```json
+{
   "name": "Updated Product",
   "price": 59.99
 }
@@ -152,7 +156,8 @@ A full-stack web application for managing products and categories. The backend i
 
 - Response:
 
-```{
+```json
+{
   "status": "success",
   "data": {
     "id": 3,
@@ -172,7 +177,8 @@ A full-stack web application for managing products and categories. The backend i
 - Request: None
 - Response:
 
-```{
+```json
+{
   "status": "success",
   "data": {
     "id": 3
@@ -189,7 +195,8 @@ A full-stack web application for managing products and categories. The backend i
 - Request: None
 - Response:
 
-```{
+```json
+{
   "status": "success",
   "data": [
     {
@@ -213,7 +220,8 @@ A full-stack web application for managing products and categories. The backend i
 - Request: None
 - Response:
 
-```{
+```json
+{
   "status": "success",
   "data": [
     {

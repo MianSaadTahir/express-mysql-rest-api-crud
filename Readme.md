@@ -32,9 +32,8 @@ A full-stack web application for managing products and categories. The backend i
 - MySQL
 - JavaScript
 - jQuery
-- AJAX
-- Bootstrap 5
 - HTML/CSS
+- Bootstrap 
 
 ## Usage
 

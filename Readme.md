@@ -10,7 +10,7 @@ A full-stack web application for managing products and categories. The backend i
 - [Usage](#usage)
 - [API Documentation](#API-Documentation)
 - [Contributing](#contributing)
-
+- [License](#license)
 ## Features
 
 - Full CRUD operations for products (Create, Read, Update, Delete)
@@ -247,4 +247,9 @@ A full-stack web application for managing products and categories. The backend i
 ## Contributing
 
 Contributions, issues, and feature requests are welcome.
-Feel free to check out the [issues page](https://github.com/MianSaadTahir/express-mysql-rest-api-crud/issues) for more information.
+Feel free to check out the [issues page](https://github.com/MianSaadTahir/express-mysql-rest-api-crud/issues).
+
+
+## License
+
+This project is open source and available under the MIT [License](https://github.com/MianSaadTahir/express-mysql-rest-api-crud/blob/main/LICENSE).
